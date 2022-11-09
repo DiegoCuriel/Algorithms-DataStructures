@@ -11,7 +11,6 @@ class MyGraph
 {
     private:
         vector<vector<int>> matriz; // Matriz de adyacencia
-        vector<bool> visitado; // Vector de visitados
         void DFS(int nodoIni, vector<bool> &visitado);
 
     public:

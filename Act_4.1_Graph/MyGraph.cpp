@@ -10,7 +10,6 @@ using namespace std;
 MyGraph::MyGraph(vector<vector<int>> &matriz)
 {
     loadGraph(matriz);
-    this->visitado = vector<bool>(matriz.size(), false);
 }
 
 void MyGraph::loadGraph(vector<vector<int>> &matriz)
@@ -20,7 +19,8 @@ void MyGraph::loadGraph(vector<vector<int>> &matriz)
 
 void MyGraph::DFS(int nodoIni)
 {
-    DFS(nodoIni, this->visitado);
+    vector<bool> visitado(this->matriz.size(), false);
+    DFS(nodoIni, visitado);
 }
 
 void MyGraph::DFS(int nodoIni, vector<bool> &visitado)
