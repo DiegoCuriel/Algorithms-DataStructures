@@ -10,12 +10,14 @@ using namespace std;
 class MyGraph
 {
     private:
-        vector<vector<int>> matriz;
+        vector<vector<int>> matriz; // Matriz de adyacencia
+        vector<bool> visitado; // Vector de visitados
+        void DFS(int nodoIni, vector<bool> &visitado);
 
     public:
         MyGraph(vector<vector<int>> &matriz);
         void loadGraph(vector<vector<int>> &matriz);
-        void DFS();
+        void DFS(int nodoIni);
         void BFS();
 };
 
