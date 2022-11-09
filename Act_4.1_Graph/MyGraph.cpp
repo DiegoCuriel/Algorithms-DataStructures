@@ -43,7 +43,6 @@ void MyGraph::BFS(int nodoIni)
     queue<int> cola;
     cola.push(nodoIni);
     visitado[nodoIni] = true;
-
     while (!cola.empty())
     {
         int nodo = cola.front();

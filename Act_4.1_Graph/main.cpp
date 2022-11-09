@@ -14,10 +14,16 @@ int main()
                                   {1, 0, 0, 0, 0},
                                   {0, 1, 0, 0, 1},
                                   {0, 0, 0, 1, 0}};
-
+    
     MyGraph graph(matriz);
+
+    cout << "Recorrido DFS:" << endl;
     graph.DFS(0);
-    cout << endl;
+
+    cout << endl <<  endl;
+
+    cout << "Recorrido BFS:" << endl;
     graph.BFS(0);
+
     return 0;
 }
