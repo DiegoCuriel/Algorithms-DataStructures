@@ -8,23 +8,23 @@
 
 using namespace std;
 
-MyGraph::MyGraph(vector<vector<int>> &matriz)
+MyGraph::MyGraph(vector<vector<int>> &matriz) // O(1)
 {
     loadGraph(matriz);
 }
 
-void MyGraph::loadGraph(vector<vector<int>> &matriz)
+void MyGraph::loadGraph(vector<vector<int>> &matriz) // O(n^2)
 {
     this->matriz = matriz;
 }
 
-void MyGraph::DFS(int nodoIni)
+void MyGraph::DFS(int nodoIni) // O(n)
 {
     vector<bool> visitado(this->matriz.size(), false);
     DFS(nodoIni, visitado);
 }
 
-void MyGraph::DFS(int nodoIni, vector<bool> &visitado)
+void MyGraph::DFS(int nodoIni, vector<bool> &visitado) // O(V^2), V = numero de vertices - podríamos mejorar esta complejidad con una lista de adyacencia
 {
     visitado[nodoIni] = true;
     cout << nodoIni << ",";
@@ -37,7 +37,7 @@ void MyGraph::DFS(int nodoIni, vector<bool> &visitado)
     }
 }
 
-void MyGraph::BFS(int nodoIni)
+void MyGraph::BFS(int nodoIni) // O(V^2), V = numero de vertices - podríamos mejorar esta complejidad con una lista de adyacencia
 {
     vector<bool> visitado(this->matriz.size(), false);
     queue<int> cola;
