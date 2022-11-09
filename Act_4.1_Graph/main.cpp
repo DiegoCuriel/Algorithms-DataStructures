@@ -17,5 +17,7 @@ int main()
 
     MyGraph graph(matriz);
     graph.DFS(0);
+    cout << endl;
+    graph.BFS(0);
     return 0;
 }

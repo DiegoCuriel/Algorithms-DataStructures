@@ -17,7 +17,7 @@ class MyGraph
         MyGraph(vector<vector<int>> &matriz);
         void loadGraph(vector<vector<int>> &matriz);
         void DFS(int nodoIni);
-        void BFS();
+        void BFS(int nodoIni);
 };
 
 #endif // MYGRAPH_H
