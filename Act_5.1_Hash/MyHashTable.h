@@ -3,11 +3,12 @@
 
 #include <list>
 #include <vector>
+#include <string>
 
 using namespace std;
 
-
-class MyHashTable{
+class MyHashTable
+{
     private:
         list<tuple<string, int>> *tabla;
         int size; //num de valores que tenemos en el hash
@@ -22,11 +23,6 @@ class MyHashTable{
         void put(string key, int value);
         int get(string key);
         void remove(string key);
-
-
 };
-
-
-
 
 #endif
